@@ -5,12 +5,14 @@ class HomePage {
     locators = {
         usernameField: '[name="login"]',
         passwordField: '[name="password"]',
-        signInButton: '[data-signin-label="Sign in Incorrect Locator"]'
+        signInButton: '[data-signin-label="Sign in INVALID"]'
     };
 
     login(username, password) {
         I.fillField(this.locators.usernameField, username);
         I.fillField(this.locators.passwordField, password);
+
+        // this will fail due to INVALID locator
         I.click(this.locators.signInButton);
     }
 }
