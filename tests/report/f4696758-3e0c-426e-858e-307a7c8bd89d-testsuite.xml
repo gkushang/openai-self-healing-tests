@@ -1,9 +1,9 @@
 <?xml version='1.0'?>
-<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1735874189898' stop='1735874193799'>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1735930870152' stop='1735930875978'>
     <name>Github Login @github</name>
     <title>Github Login @github</title>
     <test-cases>
-        <test-case start='1735874189899' status='failed' stop='1735874193626'>
+        <test-case start='1735930870153' status='passed' stop='1735930875850'>
             <name>Fred should be able to login to Github @login_github</name>
             <title>Fred should be able to login to Github @login_github</title>
             <labels>
@@ -14,37 +14,35 @@
             </labels>
             <parameters/>
             <steps>
-                <step start='1735874190625' status='passed' stop='1735874191251'>
+                <step start='1735930871240' status='passed' stop='1735930871839'>
                     <name>I am on page "/login/"</name>
                     <title>I am on page "/login/"</title>
                     <attachments/>
                     <steps/>
                 </step>
-                <step start='1735874191251' status='undefined'>
+                <step start='1735930871839' status='undefined'>
                     <name>When he logs into Github ""</name>
                     <title>When he logs into Github ""</title>
-                    <attachments>
-                        <attachment title='Main session - Last Seen Screenshot' source='67506567-b364-4206-afb1-5c01dc3a3a76-attachment.png' type='image/png' size='37554'/>
-                    </attachments>
+                    <attachments/>
                     <steps>
-                        <step start='1735874191251' status='passed' stop='1735874191550'>
+                        <step start='1735930871839' status='passed' stop='1735930872108'>
                             <name>On githubLoginPage: login "xyz", "****"</name>
                             <title>On githubLoginPage: login "xyz", "****"</title>
                             <attachments/>
                             <steps>
-                                <step start='1735874191251' status='passed' stop='1735874191377'>
+                                <step start='1735930871839' status='passed' stop='1735930871965'>
                                     <name>I fill field "[name="login"]", "xyz"</name>
                                     <title>I fill field "[name="login"]", "xyz"</title>
                                     <attachments/>
                                     <steps/>
                                 </step>
-                                <step start='1735874191377' status='passed' stop='1735874191546'>
+                                <step start='1735930871965' status='passed' stop='1735930872102'>
                                     <name>I fill field "[name="password"]", "****"</name>
                                     <title>I fill field "[name="password"]", "****"</title>
                                     <attachments/>
                                     <steps/>
                                 </step>
-                                <step start='1735874191547' status='passed' stop='1735874191550'>
+                                <step start='1735930872102' status='passed' stop='1735930872108'>
                                     <name>I click "[data-signin-label="Sign in Incorrect Locator"]"</name>
                                     <title>I click "[data-signin-label="Sign in Incorrect Locator"]"</title>
                                     <attachments/>
@@ -52,23 +50,35 @@
                                 </step>
                             </steps>
                         </step>
-                        <step start='1735874191550' status='passed' stop='1735874191553'>
+                        <step start='1735930872108' status='passed' stop='1735930872114'>
                             <name>I grab htmlfrom "body"</name>
                             <title>I grab htmlfrom "body"</title>
                             <attachments/>
                             <steps/>
                         </step>
+                        <step start='1735930873443' status='passed' stop='1735930873846'>
+                            <name>I click ".btn.btn-primary.btn-block.js-sign-in-button"</name>
+                            <title>I click ".btn.btn-primary.btn-block.js-sign-in-button"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1735930873846' status='passed' stop='1735930875849'>
+                            <name>When he logs into Github ""</name>
+                            <title>When he logs into Github ""</title>
+                            <attachments/>
+                            <steps>
+                                <step start='1735930873846' status='passed' stop='1735930875848'>
+                                    <name>I wait 2</name>
+                                    <title>I wait 2</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
                     </steps>
                 </step>
             </steps>
             <attachments/>
-            <failure>
-                <message>Clickable element "[data-signin-label="Sign in Incorrect Locator"]" was not found by text|CSS|XPath</message>
-                <stack-trace>Error: Clickable element "[data-signin-label="Sign in Incorrect Locator"]" was not found by text|CSS|XPath
-                    at new ElementNotFound (/Users/kgajjar/openai-self-healing-tests/node_modules/codeceptjs/lib/helper/errors/ElementNotFound.js:15:11)
-                    at assertElementExists (/Users/kgajjar/openai-self-healing-tests/node_modules/codeceptjs/lib/helper/Playwright.js:3744:11)
-                    at Playwright.proceedClick (/Users/kgajjar/openai-self-healing-tests/node_modules/codeceptjs/lib/helper/Playwright.js:3503:5)</stack-trace>
-            </failure>
         </test-case>
     </test-cases>
 </ns2:test-suite>
