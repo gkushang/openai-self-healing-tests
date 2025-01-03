@@ -3,6 +3,7 @@ require('dotenv-extended').config({
     path: './tests/config/codecept.dev.env',
     defaults: './tests/config/codecept.env',
 });
+require('./heal');
 require('ts-node/register');
 
 const { configure, cleanReports } = require('codeceptjs-configure');
@@ -25,6 +26,20 @@ let conf = {
         },
     },
 
+    ai: {
+        request: async (messages) => {
+            const OpenAI = require('openai');
+            const openai = new OpenAI({ apiKey: process.env['OPENAI_API_KEY'] })
+
+            const completion = await openai.chat.completions.create({
+                model: 'gpt-3.5-turbo-0125',
+                messages,
+            });
+
+            return completion?.choices[0]?.message?.content;
+        }
+    },
+
     plugins: {
         allure: {
             enabled: true,
@@ -35,6 +50,9 @@ let conf = {
             retries: 1,
             require: 'codeceptjs-configure/plugins/retry-failed-tests.plugin.js',
         },
+        heal: {
+            enabled: true
+        }
     },
 };
 

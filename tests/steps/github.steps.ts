@@ -1,19 +1,21 @@
 export { };
-const { I, githubHomePage } = inject();
+const { I, githubLoginPage } = inject();
 
 Before(() => {
-    I.amOnPage('/#/');
+    I.amOnPage('/login/');
 });
 
-When(/he searches for the \"([^\"]*)\"/, (searchFor) => {
-    githubHomePage.search(searchFor);
+When(/he logs into Github/, () => {
+    // pause();
+    githubLoginPage.login('xyz', '****');
+    I.wait(2); //hard-coded wait to see the actions for demo
 });
 
-Given(/Fred is on Github Homepage/, () => {
+Given(/Fred is on Github LoginPage/, () => {
     // add required code here (skipping this code due to AI Example is the focus here)
 });
 
 
-Then(/he sees all the detailed highlighted results including description or license info and many more/, async () => {
+Then(/he sees his account information/, async () => {
     // add assertions here (skipping this code due to AI Example is the focus here)
 });
