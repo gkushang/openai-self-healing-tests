@@ -9,4 +9,4 @@ Medium Blog on how it works: https://medium.com/p/fe9047525ab7/
 <img width="1360" alt="Screenshot 2025-01-06 at 12 49 36 PM" src="https://github.com/user-attachments/assets/f37dba8c-fdfd-44e0-be51-1fa0544a2dfa" />
 
 ### 🤝 Test Framework
-CodeceptJS
+[CodeceptJS](https://codecept.io/)
