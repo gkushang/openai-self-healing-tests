@@ -9,6 +9,10 @@ class HomePage {
     };
 
     login(username, password) {
+
+        I.wait(10)
+        I.say('waiting for this demo....', 'blue');
+
         I.fillField(this.locators.usernameField, username);
         I.fillField(this.locators.passwordField, password);
 
