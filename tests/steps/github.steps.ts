@@ -8,7 +8,7 @@ Before(() => {
 When(/he logs into Github/, () => {
     // pause();
     githubLoginPage.login('xyz', '****');
-    I.wait(10); //hard-coded wait to see the actions for demo
+    I.wait(5); //hard-coded wait to see the actions for demo
 });
 
 Given(/Fred is on Github LoginPage/, () => {
